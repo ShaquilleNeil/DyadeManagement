@@ -4,6 +4,8 @@
 <head>
     <title>Index Page</title>
     <link rel="stylesheet" type="text/css" href="../Styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
     
 </head>
 <body>
@@ -22,41 +24,65 @@
     
     <main>
         <section id="home">
-            <h1>Dyade Construction</h1>
-            <p>Construction Company</p>
+            <h1>Dyade Management</h1>
+            <p>Quality. Precision. Reliable Builds. </p>
 
-            <button class="btn_qt">Get a quote</button>
+            <div class="info_card">
+                <h4></h4>
+            </div>
+
+            <div class="home_buttons">
+                <button class="btn_eservices" onclick="location.href='#services'">Explore our services <i class="bi bi-arrow-right-short" style="font-size: 30px;"></i> </button>
+                <button class="btn_qt" onclick="location.href='#contact-us'">Get a quote</button>
+            </div>
+           
 
            
         </section>
 
         <section id="about-us">
-            <h2>About Us</h2>
-            <p>We are a team of experienced construction professionals who are dedicated to providing the best possible service to our clients.</p>
+            <div class = "side_image">
+                <img src="../Images/side.jpg" class="side_image" />
+            </div>
+            <div class="about_info">
+                <h2>About Us</h2>
+            <p>We are a team of experienced construction </br>professionals who are dedicated to providing the best possible service to our clients.</p>
             <button class="learn-more-button">Learn More</button>
+            </div>
+            
         </section>
         
         <section id="services">
+            <div class="header_title">
+                <h1>Services</h1>
+                <h3>What we offer</h3>
+            </div>
+         
 
             <div class="cards-container">
+             
 
                 <div class="card">
+                    <img src="../Images/home_ren.jpg" alt="Card 1">
                     <h3>Home Renovation</h3>
                     <p>We specialize in home renovation and construction.</p>
                    
                     <button>Get a Quote</button>
                 </div>
                 <div class="card">
+                    <img src="../Images/maintenance.jpg" alt="Card 2">
                     <h3>Maintenance</h3>
                     <p>We offer maintenance services for your home and business.</p>
                     <button>Get a Quote</button>
                 </div>
                 <div class="card">
-                    <h3>Apartment Construction</h3>
-                    <p>We build apartments for rent or sale.</p>
+                    <img src="../Images/manage.jpg" alt="Card 3">
+                    <h3>Property Management</h3>
+                    <p>We manage your property and provide maintenance services.</p>
                     <button>Get a Quote</button>
                 </div>
                 <div class="card">
+                    <img src="../Images/delivery.jpg" alt="Card 4">
                     <h3>Material Delivery & Garbage Removal</h3>
                     <p>We deliver materials to your site and remove garbage after construction.</p>
                     <button>Get a Quote</button>
@@ -66,29 +92,60 @@
             </div>
         </section>
         <section id="contact-us">
+            <div class="side_cards">
+                <div class="side_card">
+                    <div class="side_card_logo">
+                        <img src="../Images/map.png" alt="Logo">
+                    </div>
+                   
+                    <h3>Address</h3>
+                    <p>123 Main St, City, Country</p>
+                </div>
+               
+                <div class="side_card">
+                    <div class="side_card_logo">
+                        <img src="../Images/telephone.png" alt="Logo">
+                    </div>
+                    <h3>Phone</h3>
+                    <p>555-555-5555</p>
+                    <p>Mon - Fri: 9am - 5pm</p>
+                </div>
+                <div class="side_card">
+                    <div class="side_card_logo">
+                        <img src="../Images/email.png" alt="Logo">
+                    </div>
+                    <h3>Email</h3>
+                    <p>lWjgE@example.com</p>
+                </div>
+            </div>
             <div class="contact-container">
                 <form class="contact-form">
                     <h2>Contact Us</h2>
+                    <div class="top_group">
+
+                    <div class="left-group">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                    <button type="submit" class="btn_form">Submit</button>
-                </form>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
 
-                <div class="side-contact-info">
-                    <h3>Email</h3>
-                    <p>example@email.com</p>
+                    <div class="right-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="I need help with..." required>
+                    </div>
 
-                    <h3>Phone Number</h3>
-                    <p>514-576-9087</p>
+                    </div>
                     
-                    <h3>Website</h3>
-                    <p>example.com</p>
-                </div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Enter your message here" required></textarea>
+                    <button type="submit" class="btn_form" style="font-size: 20px;"><i class="bi bi-send-fill" style="font-size: 22px;"></i> Submit</button>
+                </form>
             </div>
+
+           
            
         </section>
     </main>
