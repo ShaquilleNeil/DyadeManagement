@@ -681,6 +681,12 @@ footer p{
         right: 0;
       }
 
+      section {
+        min-height: auto;
+        padding-top: 70px;
+        padding-bottom: 40px;
+      }
+
     /* NAVBAR */
     .navbar {
       height: 70px;
@@ -702,6 +708,13 @@ footer p{
       width: 100%;
       gap: 15px;
     }
+
+    #services {
+        height: auto;
+        min-height: unset;
+        padding-bottom: 60px;
+      }
+      
   
     .btn_eservices,
     .btn_qt {
@@ -786,6 +799,7 @@ footer p{
       height: auto;
       gap: 10px;
       text-align: center;
+      position: static;
     }
   }
   
