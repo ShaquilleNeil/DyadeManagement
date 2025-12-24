@@ -723,13 +723,48 @@ footer p{
   
     /* SERVICES */
     .cards-container {
-      margin-bottom: 50px;
-    }
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 30px;
+      }
   
     .card {
-      width: 90%;
-      height: auto;
-    }
+        width: 100%;
+        max-width: 340px;   /* caps size on large phones */
+        margin: 12px auto;
+        padding: 12px;
+        border-radius: 16px;
+      }
+
+      .card {
+        box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+      }
+    
+      .card:hover {
+        transform: none; /* hover makes no sense on phones */
+      }
+    
+    
+      .card img {
+        height: 160px;
+        object-fit: cover;
+      }
+
+      .card h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+    
+      .card p {
+        font-size: 14px;
+        line-height: 1.4;
+      }
+    
+      .card button {
+        padding: 8px 14px;
+        font-size: 14px;
+      }
+    
   
     /* TEAM OVERLAY */
     .Our-Team {
