@@ -152,7 +152,7 @@
                     <input type="email" id="email" name="email" placeholder="john@example.com" required>
             
                     <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+                    <input type="tel" id="phone" name="phone" placeholder="+1 123-456-7890" required>
             
                     <label for="subject">Subject:</label>
                     <input type="text" id="subject" name="subject" placeholder="I need help with..." required>
@@ -259,6 +259,85 @@
             closeMenu();
         });
     });
+  </script>
+
+  <!-- Thank You Modal -->
+  <div id="thankYouModal" class="thank-you-modal">
+    <div class="thank-you-modal-content">
+      <span class="thank-you-close">&times;</span>
+      <div class="thank-you-icon">
+        <i class="bi bi-check-circle-fill"></i>
+      </div>
+      <h2>Thank You!</h2>
+      <p>Your message has been successfully submitted. We'll get back to you soon.</p>
+      <button class="thank-you-btn" onclick="closeThankYouModal()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const contactForm = document.querySelector('.contact-form');
+    
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(contactForm);
+        const formAction = contactForm.getAttribute('action');
+        const formMethod = contactForm.getAttribute('method');
+        
+        try {
+          const response = await fetch(formAction, {
+            method: formMethod,
+            body: formData
+          });
+          
+          if (response.ok) {
+            // Show thank you modal
+            showThankYouModal();
+            
+            // Clear form fields
+            contactForm.reset();
+          } else {
+            alert('There was an error submitting your form. Please try again.');
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          alert('There was an error submitting your form. Please try again.');
+        }
+      });
+    }
+    
+    function showThankYouModal() {
+      const modal = document.getElementById('thankYouModal');
+      if (modal) {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    
+    function closeThankYouModal() {
+      const modal = document.getElementById('thankYouModal');
+      if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    }
+    
+    // Close modal when clicking the X
+    const closeBtn = document.querySelector('.thank-you-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeThankYouModal);
+    }
+    
+    // Close modal when clicking outside the modal content
+    const modal = document.getElementById('thankYouModal');
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeThankYouModal();
+        }
+      });
+    }
   </script>
   
         

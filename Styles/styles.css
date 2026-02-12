@@ -515,6 +515,158 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     box-shadow: 0 8px 20px rgba(0,0,0,.12);
 }
 
+/* Thank You Modal */
+.thank-you-modal {
+    display: none;
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.thank-you-modal-content {
+    background-color: #ffffff;
+    margin: auto;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.thank-you-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #aaa;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    line-height: 1;
+}
+
+.thank-you-close:hover {
+    color: #000;
+}
+
+.thank-you-icon {
+    font-size: 64px;
+    color: #28a745;
+    margin-bottom: 20px;
+    animation: scaleIn 0.5s ease 0.2s both;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.thank-you-modal-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 16px 0;
+}
+
+.thank-you-modal-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0 0 30px 0;
+    line-height: 1.6;
+}
+
+.thank-you-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.thank-you-btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile styles for modal */
+@media (max-width: 768px) {
+    .thank-you-modal-content {
+        padding: 32px 28px;
+        max-width: 90%;
+    }
+
+    .thank-you-icon {
+        font-size: 56px;
+    }
+
+    .thank-you-modal-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .thank-you-modal-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .thank-you-modal-content {
+        padding: 28px 24px;
+    }
+
+    .thank-you-icon {
+        font-size: 48px;
+    }
+
+    .thank-you-modal-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .thank-you-modal-content p {
+        font-size: 0.95rem;
+    }
+
+    .thank-you-btn {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+}
+
 
 .side_card {
     display: flex;
