@@ -109,7 +109,7 @@
             </div>
         </section>
         <section id="contact-us">
-            <div class="side_cards">
+            <!-- <div class="side_cards">
                 <div class="side_card">
                     <div class="side_card_logo">
                         <img src="./Images/map.png" alt="Logo">
@@ -134,34 +134,40 @@
                     <h3>Email</h3>
                     <p>lWjgE@example.com</p>
                 </div>
-            </div>
+            </div> -->
             <div class="contact-container">
-                <form class="contact-form">
+                <form action="https://services.leadconnectorhq.com/hooks/k61NMWtHIIITvikxW6G5/webhook-trigger/1eeb9249-f7d5-4890-998c-cc315c7cfd82"
+                      class="contact-form"
+                      method="POST">
+            
                     <h2>Contact Us</h2>
-                    <div class="top_group">
-
-                    <div class="left-group">
+            
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" placeholder="John Doe" required>
+            
+                    <label for="business_name">Business Name:</label>
+                    <input type="text" id="business_name" name="business_name" placeholder="Company Inc.">
+            
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                    </div>
-
-                    <div class="right-group">
+            
                     <label for="phone">Phone Number:</label>
                     <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+            
                     <label for="subject">Subject:</label>
                     <input type="text" id="subject" name="subject" placeholder="I need help with..." required>
-                    </div>
-
-                    </div>
-                    
+            
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" placeholder="Describe your project" required></textarea>
-                    <button type="submit" class="btn_form" style="font-size: 20px;"><i class="bi bi-send-fill" style="font-size: 22px;"></i> Submit</button>
+            
+                    <button type="submit" class="btn_form" style="font-size: 20px;">
+                        <i class="bi bi-send-fill" style="font-size: 22px;"></i> Submit
+                    </button>
+            
                 </form>
             </div>
-
+            
+            
            
            
         </section>
