@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dyade Management | Architectural Precision</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#ffddb8",
+              "on-surface": "#dce1fb",
+              "tertiary-fixed": "#c5e7ff",
+              "surface-container": "#191f31",
+              "inverse-primary": "#855300",
+              "on-surface-variant": "#d8c3ad",
+              "on-tertiary-fixed": "#001e2d",
+              "inverse-surface": "#dce1fb",
+              "surface-container-high": "#23293c",
+              "surface-container-highest": "#2e3447",
+              "surface-dim": "#0c1324",
+              "error": "#ffb4ab",
+              "on-tertiary-container": "#004966",
+              "secondary": "#f0bd82",
+              "on-primary-container": "#613b00",
+              "on-tertiary-fixed-variant": "#004c6a",
+              "on-primary-fixed-variant": "#653e00",
+              "on-secondary": "#472a00",
+              "tertiary-fixed-dim": "#7fd0ff",
+              "surface-tint": "#ffb95f",
+              "on-primary-fixed": "#2a1700",
+              "on-error-container": "#ffdad6",
+              "on-error": "#690005",
+              "on-background": "#dce1fb",
+              "primary-container": "#f59e0b",
+              "outline-variant": "#534434",
+              "secondary-fixed-dim": "#f0bd82",
+              "tertiary": "#8fd5ff",
+              "surface-container-low": "#151b2d",
+              "surface-bright": "#33394c",
+              "primary-fixed-dim": "#ffb95f",
+              "surface": "#0c1324",
+              "primary": "#ffc174",
+              "primary-fixed": "#ffddb8",
+              "on-secondary-fixed": "#2a1700",
+              "on-secondary-fixed-variant": "#62400f",
+              "background": "#0c1324",
+              "on-tertiary": "#00344a",
+              "on-primary": "#472a00",
+              "secondary-container": "#62400f",
+              "error-container": "#93000a",
+              "on-secondary-container": "#ddac72",
+              "surface-container-lowest": "#070d1f",
+              "tertiary-container": "#1abdff",
+              "inverse-on-surface": "#2a3043",
+              "outline": "#a08e7a",
+              "surface-variant": "#2e3447"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0c1324;
+            color: #dce1fb;
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(12, 19, 36, 0.4) 0%, rgba(12, 19, 36, 0.9) 100%);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary/30 selection:text-primary">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-[#0c1324]/60 backdrop-blur-lg shadow-2xl shadow-black/20">
+<nav class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-xl font-extrabold tracking-tighter text-slate-50 uppercase">Dyade Management</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center space-x-12 font-manrope font-bold tracking-tight text-sm uppercase">
+<a class="text-slate-300 hover:text-white transition-colors duration-300 ease-in-out transform active:scale-95" href="#projects">Projects</a>
+<a class="text-slate-300 hover:text-white transition-colors duration-300 ease-in-out transform active:scale-95" href="#services">Services</a>
+<a class="text-slate-300 hover:text-white transition-colors duration-300 ease-in-out transform active:scale-95" href="#process">Process</a>
+<a class="text-slate-300 hover:text-white transition-colors duration-300 ease-in-out transform active:scale-95" href="#about">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block font-manrope font-bold tracking-tight text-sm uppercase text-slate-300 hover:text-white transition-colors duration-300 ease-in-out transform active:scale-95 px-4 py-2">Login</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-3 rounded-xl font-manrope font-bold tracking-tight text-sm uppercase duration-300 ease-in-out transform active:scale-95 hover:bg-[#ffc174]">Consultation</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[800px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="" class="w-full h-full object-cover" data-alt="dramatic architectural shot of a modern concrete and glass residence at dusk with warm interior lights glowing through windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrB1aYMq-ZOTUh1CalPq0Qtb5_fuX0NEyVxD8kJnXHFS6yV4QePczgc7AU3VgMA1JpCVCcdaiFm3tgUqVWtofOqhpbqY0SQta1HnsFGeEAewm2_6ocxhBUrYxD1_l0x3b5uHMrEik7iKT-E2a07Iwz7dhc6YJtSvto3G5P5JpJjblqdwsyY023Ooi1xFIexqEB8IfKEPiTVsX-GhO1zwLrvpy-XMa6LESjy-wYf2D23VKihIhqotjYh-QOPRTWqcTeju61Srpkg1s"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-3xl">
+<span class="inline-block px-4 py-1.5 mb-6 bg-surface-container-highest/40 backdrop-blur-md rounded-full text-primary font-label text-[10px] uppercase tracking-[0.2em] border border-white/5">Excellence in Execution</span>
+<h1 class="font-headline font-extrabold text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[1.05] text-white mb-8">
+                        Built Right.<br/>Delivered On Time.
+                    </h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed mb-12">
+                        Reliable renovation, repair, and property services you can trust. We bring architectural precision to every project, from concept to completion.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-5">
+<button class="bg-primary-container text-on-primary-container px-10 py-5 rounded-xl font-headline font-bold uppercase tracking-wider text-sm hover:bg-primary transition-all duration-300 shadow-xl shadow-primary-container/10">
+                            Start Your Project
+                        </button>
+<button class="bg-transparent border border-outline-variant/30 text-white px-10 py-5 rounded-xl font-headline font-bold uppercase tracking-wider text-sm hover:bg-white/5 transition-all duration-300 backdrop-blur-sm">
+                            View Portfolio
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section (Asymmetric Editorial Layout) -->
+<section class="py-32 bg-surface" id="about">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-5 relative">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+<img alt="" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="close up of an architect's hands reviewing detailed blueprints on a wooden desk with a metal scale ruler" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6zKG5SriRLS9-Ed7DznAUf9_SKka4uGg4ahwmCWgqrow01KCPx1OnewJCh8L1uqRH3ALcfR0_nhPgUxd6bvZy_3Q1lMaf22sD4u_9uk5IOIrNcs9uvE5wPTDxpZQna17Asu9eWbpchpgvkS0-A-gIuc_y-mlc0tWnEtqV4WAQQvJAaW1H4qcHwte8gpzlWDg10Cup5BkQMx04QOTQs3b66_JjtqawODvgeJzKkApmZomVyEZwi2TgxXj3osAhf1_MeyfTlumd6ww"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-64 aspect-square bg-surface-container-low p-8 rounded-xl hidden md:block">
+<p class="font-headline font-bold text-4xl text-primary mb-2">15+</p>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Years of Precision Management</p>
+</div>
+</div>
+<div class="lg:col-span-7">
+<span class="font-label text-xs uppercase tracking-[0.3em] text-primary mb-6 block">Our Foundation</span>
+<h2 class="font-headline font-bold text-4xl md:text-5xl text-white mb-8 leading-tight">Beyond Construction: We Manage Visions.</h2>
+<div class="space-y-6 text-on-surface-variant text-lg leading-[1.8]">
+<p>
+                            Dyade Management was founded on the principle that precision in project delivery is as important as the physical build itself. We bridge the gap between architectural intent and practical execution.
+                        </p>
+<p>
+                            Our team specializes in high-end residential and commercial developments, treating every square foot as a testament to our commitment to quality. We don't just build structures; we curate environments that stand the test of time.
+                        </p>
+</div>
+<div class="mt-12 grid grid-cols-2 gap-8">
+<div>
+<span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings: 'FILL' 1;">verified</span>
+<h4 class="font-headline font-bold text-white text-sm uppercase tracking-wider">Certified Quality</h4>
+</div>
+<div>
+<span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<h4 class="font-headline font-bold text-white text-sm uppercase tracking-wider">Strict Timelines</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid Style) -->
+<section class="py-32 bg-surface-container-low" id="services">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<span class="font-label text-xs uppercase tracking-[0.3em] text-primary mb-6 block">Expertise</span>
+<h2 class="font-headline font-bold text-4xl md:text-6xl text-white leading-tight">Mastering Every Detail of the Build.</h2>
+</div>
+<p class="text-on-surface-variant max-w-sm mb-2">From structural integrity to the finest finish, our services cover the full lifecycle of your property.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service Card 1 -->
+<div class="group bg-surface-container-high p-10 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary-container/5 relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-8">home_repair_service</span>
+<h3 class="font-headline font-bold text-2xl text-white mb-4">Structural Repair</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">Ensuring the core integrity of your property with expert engineering and restorative techniques.</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
+<span class="material-symbols-outlined text-[120px]">engineering</span>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="group bg-surface-container-high p-10 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary-container/5 relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-8">design_services</span>
+<h3 class="font-headline font-bold text-2xl text-white mb-4">Bespoke Renovations</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">Transforming spaces with a focus on modern aesthetics, functional design, and premium materials.</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
+<span class="material-symbols-outlined text-[120px]">architecture</span>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="group bg-surface-container-high p-10 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary-container/5 relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-8">apartment</span>
+<h3 class="font-headline font-bold text-2xl text-white mb-4">Property Management</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">Continuous care and strategic maintenance plans to preserve and enhance your property's value.</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
+<span class="material-symbols-outlined text-[120px]">domain</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-40 bg-surface" id="contact">
+<div class="max-w-7xl mx-auto px-8">
+<div class="bg-surface-container-low rounded-[2rem] overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-inner">
+<div class="p-12 md:p-20 flex flex-col justify-center">
+<span class="font-label text-xs uppercase tracking-[0.3em] text-primary mb-6 block">Inquiry</span>
+<h2 class="font-headline font-bold text-4xl md:text-5xl text-white mb-8">Tell us about your project.</h2>
+<p class="text-on-surface-variant text-lg mb-12">We’ll review your requirements and get back to you with a preliminary consultation within 24 hours.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase tracking-widest text-slate-500">Call Us</p>
+<p class="text-white font-medium">+1 (555) 234-8900</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase tracking-widest text-slate-500">Email Us</p>
+<p class="text-white font-medium">projects@dyade-mgmt.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high/50 p-12 md:p-20">
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative">
+<label class="font-label text-[10px] uppercase tracking-widest text-slate-500 mb-2 block">Full Name</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl p-4 text-white focus:ring-2 focus:ring-primary/50 transition-all placeholder:text-slate-600" placeholder="John Doe" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label text-[10px] uppercase tracking-widest text-slate-500 mb-2 block">Email Address</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl p-4 text-white focus:ring-2 focus:ring-primary/50 transition-all placeholder:text-slate-600" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="font-label text-[10px] uppercase tracking-widest text-slate-500 mb-2 block">Project Type</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-xl p-4 text-white focus:ring-2 focus:ring-primary/50 transition-all">
+<option>Residential Renovation</option>
+<option>Commercial Development</option>
+<option>Structural Repair</option>
+<option>Other Services</option>
+</select>
+</div>
+<div>
+<label class="font-label text-[10px] uppercase tracking-widest text-slate-500 mb-2 block">Message</label>
+<textarea class="w-full bg-surface-container-lowest border-none rounded-xl p-4 text-white focus:ring-2 focus:ring-primary/50 transition-all placeholder:text-slate-600" placeholder="Briefly describe your vision..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-5 rounded-xl font-headline font-bold uppercase tracking-widest text-sm hover:bg-primary transition-all duration-300 shadow-xl shadow-primary-container/20">
+                                Send Inquiry
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0c1324] w-full py-16 border-t border-white/5 bg-[#070d1f]">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-lg font-bold text-slate-200">Dyade Management</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-inter text-xs tracking-widest uppercase text-slate-500 hover:text-slate-200 transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-inter text-xs tracking-widest uppercase text-slate-500 hover:text-slate-200 transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-inter text-xs tracking-widest uppercase text-slate-500 hover:text-slate-200 transition-colors opacity-80 hover:opacity-100" href="#">Sustainability Report</a>
+<a class="font-inter text-xs tracking-widest uppercase text-slate-500 hover:text-slate-200 transition-colors opacity-80 hover:opacity-100" href="#">Careers</a>
+</div>
+<p class="font-inter text-xs tracking-widest uppercase text-slate-500">© 2024 Dyade Management. Architectural Precision in Project Delivery.</p>
+</div>
+</footer>
+</body></html>

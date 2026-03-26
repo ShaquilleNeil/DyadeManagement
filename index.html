@@ -4,10 +4,17 @@
 <head>
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Page</title>
+    <title>Dyade Management | Premium Construction Services</title>
+    <meta name="description" content="Dyade Management delivers structural repair, bespoke renovations, property management, and deliveries with precision and reliability.">
+    <meta property="og:title" content="Dyade Management">
+    <meta property="og:description" content="Premium construction and property services built on quality, precision, and trust.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./Images/back4.jpg">
+    <meta name="theme-color" content="#020617">
+    <link rel="icon" href="./Images/back4.jpg">
     <link rel="stylesheet" type="text/css" href="./Styles/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script 
   src="https://widgets.leadconnectorhq.com/loader.js"  
@@ -17,19 +24,20 @@
     
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
     </header>
-    <div class="navbar">
-        <div class="logo"></div>
+    <div class="navbar" role="navigation" aria-label="Main navigation">
+        <a class="logo" href="#home">Dyade Management</a>
 
-        <button class="hamburger" aria-label="Toggle menu">
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
             <span></span>
             <span></span>
             <span></span>
           </button>
           
 
-        <div class="nav-links">
+        <div class="nav-links" id="site-nav">
         <a href="#home">HOME</a>
         <a href="#about-us">ABOUT</a>
         <a href="#services">SERVICES</a>
@@ -37,17 +45,17 @@
     </div>
     </div>
     
-    <main>
+    <main id="main-content">
         <section id="home">
-            <h1>Dyade Management</h1>
-            <p>Quality. Precision. Reliable Builds. </p>
+            <h1>Built With Precision.<br>Delivered With Confidence.</h1>
+            <p>Quality. Precision. Reliable Builds.</p>
 
             <div class="info_card">
                 <h4></h4>
             </div>
 
             <div class="home_buttons">
-                <button class="btn_eservices" onclick="location.href='#services'">Explore our services <i class="bi bi-arrow-right-short" style="font-size: 30px;"></i> </button>
+                <button class="btn_eservices" onclick="location.href='#services'">Explore our services <i class="bi bi-arrow-right-short"></i> </button>
                 <button class="btn_qt" onclick="location.href='#contact-us'">Get a quote</button>
             </div>
            
@@ -57,6 +65,9 @@
 
         <section class="about-split-section" id="about-us" >
             <div class="image-side"></div>
+            <div class="about-overlay-card">
+                <p>15+ Years Experience</p>
+            </div>
         
         
         
@@ -80,29 +91,29 @@
              
 
                 <div class="card">
-                    <img src="./Images/home_ren.jpg" alt="Card 1">
-                    <h3>Home Renovation</h3>
-                    <p>We specialize in home renovation and construction.</p>
+                    <img src="./Images/home_ren.jpg" alt="Structural repair project" loading="lazy" decoding="async">
+                    <h3>Structural Repair</h3>
+                    <p>We restore core integrity with dependable structural solutions built to last.</p>
                    
-                    <button class="quote_btn" onClick="location.href ='#contact-us'" data-title="Renovation">Get a Quote</button>
+                    <button class="quote_btn" onClick="location.href ='#contact-us'" data-title="Structural Repair">Get a Quote</button>
                 </div>
                 <div class="card">
-                    <img src="./Images/maintenance.jpg" alt="Card 2">
-                    <h3>Maintenance</h3>
-                    <p>We offer maintenance services for your home and business.</p>
-                    <button class="quote_btn" onClick="location.href ='#contact-us'" data-title="Maintenance">Get a Quote</button>
+                    <img src="./Images/maintenance.jpg" alt="Bespoke renovation interior" loading="lazy" decoding="async">
+                    <h3>Bespoke Renovations</h3>
+                    <p>We tailor high-end renovations around your lifestyle, goals, and timeline.</p>
+                    <button class="quote_btn" onClick="location.href ='#contact-us'" data-title="Bespoke Renovations">Get a Quote</button>
                 </div>
                 <div class="card">
-                    <img src="./Images/manage.jpg" alt="Card 3">
+                    <img src="./Images/manage.jpg" alt="Property management site inspection" loading="lazy" decoding="async">
                     <h3>Property Management</h3>
-                    <p>We manage your property and provide maintenance services.</p>
+                    <p>We protect value through proactive upkeep, supervision, and trusted operations.</p>
                     <button class="quote_btn" onClick="location.href ='#contact-us'" data-title="Property Management">Get a Quote</button>
                 </div>
                 <div class="card">
-                    <img src="./Images/delivery.jpg" alt="Card 4">
-                    <h3>Logistics</h3>
-                    <p>We deliver materials to your site and remove garbage after construction.</p>
-                    <button class="quote_btn" onClick="location.href ='#contact-us'" data-title="Material Logistics">Get a Quote</button>
+                    <img src="./Images/delivery.jpg" alt="Delivery logistics service" loading="lazy" decoding="async">
+                    <h3>Deliveries</h3>
+                    <p>We coordinate materials and site logistics so every phase stays on schedule.</p>
+                    <button class="quote_btn" onClick="location.href ='#contact-us'" data-title="Deliveries">Get a Quote</button>
                 </div>
 
 
@@ -136,6 +147,15 @@
                 </div>
             </div> -->
             <div class="contact-container">
+                <div class="contact-copy">
+                    <h2>Let’s Build Your Next Project</h2>
+                    <p>Share your requirements and we will respond with a tailored proposal and next steps.</p>
+                    <div class="contact-list">
+                        <p><i class="bi bi-telephone-fill"></i> +1 (555) 555-5555</p>
+                        <p><i class="bi bi-envelope-fill"></i> hello@dyade.com</p>
+                        <p><i class="bi bi-geo-alt-fill"></i> Serving residential and commercial properties</p>
+                    </div>
+                </div>
                 <form action="https://services.leadconnectorhq.com/hooks/k61NMWtHIIITvikxW6G5/webhook-trigger/1eeb9249-f7d5-4890-998c-cc315c7cfd82"
                       class="contact-form"
                       method="POST">
@@ -160,9 +180,10 @@
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" placeholder="Describe your project" required></textarea>
             
-                    <button type="submit" class="btn_form" style="font-size: 20px;">
-                        <i class="bi bi-send-fill" style="font-size: 22px;"></i> Submit
+                    <button type="submit" class="btn_form">
+                        <i class="bi bi-send-fill"></i> Submit
                     </button>
+                    <p class="form-status" aria-live="polite"></p>
             
                 </form>
             </div>
@@ -203,31 +224,35 @@
         
     
     <script>
+        const navbar = document.querySelector('.navbar');
         window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-        
-            if (window.scrollY > 50) {
+            if (!navbar) return;
+            if (window.scrollY > 30) {
                 navbar.classList.add('navbar-scrolled');
             } else {
                 navbar.classList.remove('navbar-scrolled');
             }
         });
 
-        (function() {
-            const navbar = document.querySelector('.navbar');
-            const aboutSection = document.querySelector('#about-us');
-            if (!navbar || !aboutSection) return;
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        navbar.classList.add('on-about');
-                    } else {
-                        navbar.classList.remove('on-about');
-                    }
-                });
-            }, { threshold: 0.2, rootMargin: '-80px 0px 0px 0px' });
-            observer.observe(aboutSection);
-        })();
+        // Active nav link by visible section
+        const sectionIds = ['home', 'about-us', 'services', 'contact-us'];
+        const navMap = new Map(
+            Array.from(document.querySelectorAll('.nav-links a')).map(link => [link.getAttribute('href').replace('#', ''), link])
+        );
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                navMap.forEach(link => link.classList.remove('is-active'));
+                const active = navMap.get(entry.target.id);
+                if (active) active.classList.add('is-active');
+            });
+        }, { threshold: 0.45, rootMargin: '-90px 0px -35% 0px' });
+
+        sectionIds.forEach((id) => {
+            const section = document.getElementById(id);
+            if (section) sectionObserver.observe(section);
+        });
         </script>
 
 <script>
@@ -238,12 +263,14 @@
         hamburger.classList.remove('active');
         navLinks.classList.remove('open');
         document.body.classList.remove('menu-open');
+        hamburger.setAttribute('aria-expanded', 'false');
     }
 
     function openMenu() {
         hamburger.classList.add('active');
         navLinks.classList.add('open');
         document.body.classList.add('menu-open');
+        hamburger.setAttribute('aria-expanded', 'true');
     }
 
     hamburger.addEventListener('click', () => {
@@ -276,10 +303,21 @@
 
   <script>
     const contactForm = document.querySelector('.contact-form');
+    const formStatus = document.querySelector('.form-status');
+    const submitBtn = contactForm ? contactForm.querySelector('.btn_form') : null;
+    const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
     
     if (contactForm) {
       contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Sending...';
+        }
+        if (formStatus) {
+          formStatus.textContent = 'Sending your request...';
+          formStatus.className = 'form-status is-pending';
+        }
         
         const formData = new FormData(contactForm);
         const formAction = contactForm.getAttribute('action');
@@ -297,12 +335,27 @@
             
             // Clear form fields
             contactForm.reset();
+            if (formStatus) {
+              formStatus.textContent = 'Your message was sent successfully.';
+              formStatus.className = 'form-status is-success';
+            }
           } else {
-            alert('There was an error submitting your form. Please try again.');
+            if (formStatus) {
+              formStatus.textContent = 'There was an error submitting your form. Please try again.';
+              formStatus.className = 'form-status is-error';
+            }
           }
         } catch (error) {
           console.error('Error:', error);
-          alert('There was an error submitting your form. Please try again.');
+          if (formStatus) {
+            formStatus.textContent = 'Network error. Please check your connection and try again.';
+            formStatus.className = 'form-status is-error';
+          }
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+          }
         }
       });
     }
