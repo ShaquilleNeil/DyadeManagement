@@ -533,6 +533,11 @@ textarea:focus-visible {
     transform: rotate(-45deg) translate(6px, -5px);
 }
 
+body.menu-open {
+    overflow: hidden;
+    touch-action: none;
+}
+
 .thank-you-modal {
     display: none;
     position: fixed;
@@ -619,19 +624,38 @@ textarea:focus-visible {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
-        margin-left: auto;
+        margin-left: 0;
+        position: fixed;
+        top: max(14px, env(safe-area-inset-top));
+        right: 16px;
+        z-index: 1200;
+        padding: 6px;
+        border-radius: 10px;
+        background: rgba(2, 6, 23, 0.72);
+        backdrop-filter: blur(8px);
     }
 
     .nav-links {
         position: fixed;
-        inset: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100dvh;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+        gap: 1.75rem;
+        padding-top: calc(max(84px, env(safe-area-inset-top) + 64px));
+        padding-bottom: 24px;
         background: rgba(2, 6, 23, 0.95);
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        z-index: 1100;
         transition: 0.25s ease;
     }
 
@@ -644,10 +668,16 @@ textarea:focus-visible {
     .nav-links a {
         font-size: 1rem;
         color: #fff;
+        line-height: 1;
     }
 
     .logo {
         font-size: 0.95rem;
+        z-index: 1001;
+    }
+
+    .navbar {
+        padding-right: 64px;
     }
 
     .home_buttons {

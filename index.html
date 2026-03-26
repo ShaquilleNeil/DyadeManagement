@@ -271,6 +271,7 @@
         navLinks.classList.add('open');
         document.body.classList.add('menu-open');
         hamburger.setAttribute('aria-expanded', 'true');
+        navLinks.scrollTop = 0;
     }
 
     hamburger.addEventListener('click', () => {
