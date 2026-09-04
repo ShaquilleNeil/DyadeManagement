@@ -19,6 +19,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
 body {
@@ -30,7 +31,7 @@ body {
 }
 
 main section {
-    scroll-margin-top: 94px;
+    scroll-margin-top: 84px;
 }
 
 h1, h2, h3, h4 {
@@ -49,6 +50,8 @@ p {
 section {
     width: 100%;
     position: relative;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .navbar {
@@ -279,8 +282,12 @@ section {
 }
 
 #services {
+    min-height: 100vh;
     padding: 100px clamp(1rem, 4vw, 3rem);
     background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .header_title {
@@ -348,8 +355,12 @@ section {
 }
 
 #contact-us {
+    min-height: 100vh;
     padding: 100px clamp(1rem, 4vw, 3rem);
     background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact-container {

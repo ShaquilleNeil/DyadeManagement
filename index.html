@@ -151,17 +151,19 @@
                     <h2>Let’s Build Your Next Project</h2>
                     <p>Share your requirements and we will respond with a tailored proposal and next steps.</p>
                     <div class="contact-list">
-                        <p><i class="bi bi-telephone-fill"></i> +1 (555) 555-5555</p>
-                        <p><i class="bi bi-envelope-fill"></i> hello@dyade.com</p>
-                        <p><i class="bi bi-geo-alt-fill"></i> Serving residential and commercial properties</p>
+                        <p><i class="bi bi-telephone-fill"></i> +1 438 778 3730</p>
+                        <p><i class="bi bi-envelope-fill"></i> info@dyademanagement.com</p>
+                        <p><i class="bi bi-geo-alt-fill"></i> Montréal</p>
                     </div>
                 </div>
-                <form action="https://services.leadconnectorhq.com/hooks/k61NMWtHIIITvikxW6G5/webhook-trigger/1eeb9249-f7d5-4890-998c-cc315c7cfd82"
+                <form action="https://formspree.io/f/xvkoqvwg"
                       class="contact-form"
                       method="POST">
-            
+
+                    <input type="hidden" id="email_subject" name="_subject" value="New inquiry — Dyade Management website">
+
                     <h2>Contact Us</h2>
-            
+
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" placeholder="John Doe" required>
             
@@ -311,6 +313,12 @@
     if (contactForm) {
       contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
+
+        const subjectValue = document.getElementById('subject').value.trim();
+        document.getElementById('email_subject').value = subjectValue
+          ? `New inquiry — ${subjectValue}`
+          : 'New inquiry — Dyade Management website';
+
         if (submitBtn) {
           submitBtn.disabled = true;
           submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Sending...';
@@ -327,13 +335,14 @@
         try {
           const response = await fetch(formAction, {
             method: formMethod,
-            body: formData
+            body: formData,
+            headers: { 'Accept': 'application/json' }
           });
-          
+
           if (response.ok) {
             // Show thank you modal
             showThankYouModal();
-            
+
             // Clear form fields
             contactForm.reset();
             if (formStatus) {
@@ -341,8 +350,12 @@
               formStatus.className = 'form-status is-success';
             }
           } else {
+            const data = await response.json().catch(() => null);
+            const message = data && data.errors
+              ? data.errors.map(err => err.message).join(', ')
+              : 'There was an error submitting your form. Please try again.';
             if (formStatus) {
-              formStatus.textContent = 'There was an error submitting your form. Please try again.';
+              formStatus.textContent = message;
               formStatus.className = 'form-status is-error';
             }
           }
